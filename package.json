@@ -4,7 +4,7 @@
   "description": "",
   "homepage": "https://AndriiRod.github.io/goit-js-hw-10",
   "scripts": {
-    "start": "parcel src/*.html",
+    "start": "parcel src/*.html -p 1624",
     "build": "parcel build src/*.html --public-url /goit-js-hw-10/"
   },
   "repository": {
@@ -18,7 +18,10 @@
     "url": ""
   },
   "dependencies": {
-    "modern-normalize": "^1.1.0"
+    "handlebars": "^4.7.7",
+    "lodash.debounce": "^4.0.8",
+    "modern-normalize": "^1.1.0",
+    "notiflix": "^3.2.6"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
