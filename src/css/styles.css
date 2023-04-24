@@ -32,36 +32,65 @@ body {
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
-.country-list {
+p,
+h2,
+ul {
   list-style: none;
-  padding: 15px;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
+  padding: 0;
+}
+.box {
+  padding: 15px;
 
+  flex-direction: column;
   background-color: antiquewhite;
   border: solid 1px tomato;
   border-radius: 10px;
-
+  display: none;
   opacity: 0;
   transform: scale(0);
   transition: opacity 250ms ease, transform 250ms ease;
 }
 
-.show-country-list {
+.show-box {
+  display: flex;
   opacity: 1;
   transform: scale(1);
 }
+
+.country-list {
+  align-items: flex-start;
+  gap: 10px;
+}
+
 .country-item {
   display: flex;
   gap: 8px;
 
   opacity: 0;
-  transition: opacity 1000ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
 }
 
 .show-li {
   opacity: 1;
+}
+
+.info-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10;
+
+  margin-bottom: 20px;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-item {
+  display: flex;
+  gap: 5px;
 }
