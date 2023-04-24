@@ -24,8 +24,6 @@ function getInputValue(e) {
 function fetchValue(inputValue) {
   fetchCountries(inputValue)
     .then(data => {
-      console.log(data);
-      console.log(data[0].languages);
       checkData(data);
     })
     .catch(error => {
