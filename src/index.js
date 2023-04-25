@@ -27,9 +27,16 @@ function fetchValue(inputValue) {
       checkData(data);
     })
     .catch(error => {
-      console.log(error);
-      Notify.failure('Oops, there is no country with that name');
+      errorCheck(error);
     });
+}
+
+function errorCheck(error) {
+  if (error.response.status === 404) {
+    Notify.failure('Oops, there is no country with that name');
+  } else {
+    Notify.failure(error.response.statusText);
+  }
 }
 
 function checkData(data) {

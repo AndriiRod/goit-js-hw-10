@@ -5,7 +5,9 @@ function fetchCountries(nameCountry) {
   return fetch(`${BASE_URL}name/${nameCountry}?fields=${filter}`).then(
     response => {
       if (!response.ok) {
-        throw new Error(response.status);
+        const error = new Error(response.statusText);
+        error.response = response;
+        throw error;
       }
       return response.json();
     }
